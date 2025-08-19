@@ -1,0 +1,41 @@
+identity:
+  name: "amapweather"
+  author: "aiguantoux"
+  label:
+    en_US: "amapweather"
+    zh_Hans: "amapweather"
+    pt_BR: "amapweather"
+description:
+  human:
+    en_US: "get weather info based on location."
+    zh_Hans: "get weather info based on location."
+    pt_BR: "get weather info based on location."
+  llm: "get weather info based on location."
+parameters:
+  - name: city
+    type: string
+    required: true
+    label:
+      en_US: city name
+      zh_Hans: 城市名称
+    human_description:
+      en_US: "get weather info based on location."
+      zh_Hans: "get weather info based on location."
+      pt_BR: "get weather info based on location."
+    llm_description: "get weather info based on location."
+    form: form
+  - name: chat-model
+    type: model-selector
+    scope: llm
+    required: true
+    label:
+      en_US: llm
+      zh_Hans: llm大模型
+    human_description:
+      en_US: llm
+      zh_Hans: llm大模型
+    llm_description: 对话大模型
+    form: form
+extra:
+  python:
+    source: tools/amapweather.py
